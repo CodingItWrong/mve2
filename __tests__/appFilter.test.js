@@ -12,7 +12,7 @@ describe('Filtering the lens list', () => {
         nock.restore();
       });
       it('When a Alcon brand is selected the list should display only Alcon Lens', async () => {
-        nock('https://ia-server2-production.up.railway.app').get('/api/iols').reply(200, iols);
+        nock('https://ia-server2-production.up.railway.app').persist().get('/api/iols').reply(200, iols);
         render(<App />);
 
         const filterText = await screen.findByRole('text',{name: 'All'});
