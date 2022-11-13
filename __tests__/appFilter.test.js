@@ -20,9 +20,9 @@ describe('Filtering the lens list', () => {
         const option = await screen.findByRole('text',{name: "Alcon"})
         fireEvent.press(option);
         
-        // expect(await screen.findAllByRole('text',{name: /Alcon Test/})).toBeTruthy();
-        // expect(screen.queryByRole('text',{name:/Zeiss Test/})).toBe(null);
+        expect(await screen.findAllByRole('text',{name: /Alcon Test/})).toBeTruthy();
+        expect(screen.queryByRole('text',{name:/Zeiss Test/})).toBe(null);
      
-        // screen.debug();
+        screen.debug();
       });
 });
