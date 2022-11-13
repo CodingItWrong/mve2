@@ -43,6 +43,7 @@ export default function App() {
           throw Error();
         }
       } catch (error) {
+        console.error(error);
         dispatch({ type: 'FETCH_FAILURE' });
       }
     };
